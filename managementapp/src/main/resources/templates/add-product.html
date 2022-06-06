@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/%22%3E">
+<head>
+    <meta charset="UTF-8">
+    <title>Add product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+
+<h2>Add product</h2>
+
+<form method="post" th:action="@{/add-new-product}" th:object="${products}">
+
+    <label for="id">Id:</label><br>
+    <input type="number" id="id" name="id" th:field="*{id}"><br>
+
+
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" th:field="*{name}"><br>
+
+    <label for="description">Description:</label><br>
+    <input type="text" id="description" name="description" th:field="*{description}"><br>
+
+    <label for="producer">From</label><br>
+    <input type="text" id="producer" name="producer" th:field="*{producer}"><br>
+
+    <label for="quantity">Quantity</label><br>
+    <input type="text" id="quantity" name="quantity" th:field="*{quantity}"><br>
+
+    <label for="lot">Lot.</label><br>
+    <input type="text" id="lot" name="lot" th:field="*{lot}"><br>
+
+    <input type="submit" value="Submit">
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>
